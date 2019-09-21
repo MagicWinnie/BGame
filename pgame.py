@@ -93,7 +93,7 @@ while True:
                             except:
                                 raise ValueError("Enter a valid COM Port")
                                 exit()
-                            string = s.decode().replace("\n","")[:-1]
+                            string = s.decode('utf-8', 'ignore').replace("\n","")[:-1]
                             if string[0]=="#" and string[-1]=="%":
                                 temp = list(map(int, string[1:-1].split()))
                                 if len(temp)==2:
